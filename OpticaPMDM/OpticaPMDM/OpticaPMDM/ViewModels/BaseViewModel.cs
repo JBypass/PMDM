@@ -12,6 +12,9 @@ namespace OpticaPMDM.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+
+        //Comentario para probar commit. 
+
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
         bool isBusy = false;
