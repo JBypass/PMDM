@@ -24,6 +24,9 @@ namespace OpticaPMDM.ViewModels
             set { SetProperty(ref isBusy, value); }
         }
 
+        //Comentario para probar commit desde mac
+
+
         string title = string.Empty;
         public string Title
         {
