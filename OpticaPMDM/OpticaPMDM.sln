@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpticaPMDM.Android", "Optic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpticaPMDM.iOS", "OpticaPMDM\OpticaPMDM.iOS\OpticaPMDM.iOS.csproj", "{B3029AD2-1D7E-47AF-89C8-5A397273DA47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpticaPMDM", "OpticaPMDM\OpticaPMDM\OpticaPMDM.csproj", "{8ACC0A8F-D92C-482C-86F2-6F8E4ACF4C93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpticaPMDM", "OpticaPMDM\OpticaPMDM\OpticaPMDM.csproj", "{8ACC0A8F-D92C-482C-86F2-6F8E4ACF4C93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpticaPMDM.Backend", "OpticaPMDM.Backend\OpticaPMDM.Backend.csproj", "{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,18 @@ Global
 		{8ACC0A8F-D92C-482C-86F2-6F8E4ACF4C93}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{8ACC0A8F-D92C-482C-86F2-6F8E4ACF4C93}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{8ACC0A8F-D92C-482C-86F2-6F8E4ACF4C93}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}.Release|iPhone.Build.0 = Release|Any CPU
+		{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{F937C71C-CFBC-4A7A-B1CB-DAD5D11522CF}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
