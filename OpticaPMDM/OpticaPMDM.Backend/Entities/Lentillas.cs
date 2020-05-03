@@ -20,6 +20,6 @@ namespace OpticaPMDM.Backend.Entities
         [NotNull]
         public int Num_Pares { get; set; }
 
-        public int Total_Dias { get; set; }
+        public int Dias_Restantes { get; set; }
     }
 }

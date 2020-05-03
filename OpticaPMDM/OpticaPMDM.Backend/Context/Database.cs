@@ -15,15 +15,13 @@ namespace OpticaPMDM.Backend.Context
         public static string DBPATH;
 
         static Database _instance;
-
         public static Database INSTANCE
         {
             get
             {
                 if (_instance == null)
-                {
                     _instance = new Database();
-                }
+
                 return _instance;
             }
         }
@@ -35,6 +33,7 @@ namespace OpticaPMDM.Backend.Context
                 _database = new SQLiteAsyncConnection(DBPATH);
                 _database.CreateTableAsync<Lentillas>().Wait();
                 _database.CreateTableAsync<Pedidos>().Wait();
+                _database.CreateTableAsync<Usadas>().Wait();
             }
             catch (Exception ex)
             {

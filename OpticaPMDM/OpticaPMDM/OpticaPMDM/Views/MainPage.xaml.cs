@@ -5,14 +5,77 @@ using Xamarin.Forms.Xaml;
 
 namespace OpticaPMDM.Views
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : TabbedPage
     {
+        ContentPage _inicioPage;
+        NavigationPage _stockPage;
+        NavigationPage _pedidosPage;
+        ContentPage _configuracionPage;
+
+        private ContentPage InicioPage
+        {
+            get
+            {
+                if(_inicioPage == null){
+                    _inicioPage = new InicioPage();
+                }
+                return _inicioPage;
+            }
+        }
+
+        private NavigationPage StockPage
+        {
+            get
+            {
+                if(_stockPage == null)
+                {
+                    _stockPage = new NavigationPage(new StockPage());
+                }
+                return _stockPage;
+            }
+        }
+
+        private NavigationPage PedidosPage
+        {
+            get
+            {
+                if(_pedidosPage == null)
+                {
+                    _pedidosPage = new NavigationPage(new PedidosPage());
+                }
+                return _pedidosPage;
+            }
+        }
+
+        private ContentPage ConfiguracionPage
+        {
+            get
+            {
+                if(_configuracionPage == null)
+                {
+                    _configuracionPage = new ConfiguracionPage();
+                }
+                return _configuracionPage;
+            }
+        }
+
         public MainPage()
         {
             InitializeComponent();
+
+            InicioPage.IconImageSource = ImageSource.FromFile("home_variant_outline");
+            Children.Add(InicioPage);
+
+            StockPage.IconImageSource = ImageSource.FromFile("eye_settings_outline");
+            Children.Add(StockPage);
+
+            PedidosPage.IconImageSource = ImageSource.FromFile("cart");
+            Children.Add(PedidosPage);
+
+            ConfiguracionPage.IconImageSource = ImageSource.FromFile("cog_outline");
+            Children.Add(ConfiguracionPage);
         }
     }
 }
