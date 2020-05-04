@@ -21,5 +21,11 @@ namespace OpticaPMDM.Backend.Entities
         public int Num_Pares { get; set; }
 
         public int Dias_Restantes { get; set; }
+
+        public DateTime FechaRegistro { get; set; }
+
+        public DateTime FechaFinal { get; set; }
+
+        public byte[] FotoCaja { get; set; }
     }
 }

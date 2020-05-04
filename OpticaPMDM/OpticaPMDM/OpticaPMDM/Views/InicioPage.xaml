@@ -8,7 +8,44 @@
              x:Class="OpticaPMDM.Views.InicioPage">
     <ContentPage.Content>
         <local:GradientColorStack StartColor="AliceBlue" EndColor="AntiqueWhite">
-            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+          
+                <Frame Grid.Row="0" CornerRadius="200"
+                    BorderColor="Transparent" BackgroundColor="Gray"
+                       Padding="0" WidthRequest="170" VerticalOptions="Center"
+                       HorizontalOptions="Center">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding EstrenarCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame BorderColor="Transparent" BackgroundColor="LightSkyBlue"
+                           Padding="0" CornerRadius="200" WidthRequest="155"
+                           VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="Estrenar" TextColor="Gray"/>
+                    </Frame>
+                </Frame>
+
+                <Button Text="Cargar stock" Command="{Binding CargarStockCommand}" 
+                                Grid.Row="3" 
+                                FontSize="Medium" FontAttributes="Bold"
+                            CornerRadius="50" BackgroundColor="LightSkyBlue"
+                        TextColor="Gray"
+                                MinimumHeightRequest="100"
+                            Margin="10, 15, 10, 15"/>
+
+                <Button Text="Reiniciar" Command="{Binding FinalizarParCommand}" 
+                                Grid.Row="1" 
+                                FontSize="Medium" FontAttributes="Bold"
+                            CornerRadius="50" BackgroundColor="LightSkyBlue"
+                        TextColor="Gray"
+                                MinimumHeightRequest="100"
+                            Margin="10, 15, 10, 15"/>
+
+            </Grid>
         </local:GradientColorStack>
     </ContentPage.Content>
 </ContentPage>

@@ -75,11 +75,14 @@ namespace OpticaPMDM.ViewModels
                     await _lentillasService.Update(lentillas);
                     //Activar botón Finalizar par y esactivar botón estrenar
                     Estrenadas = true;
+                    if(lentillas.Num_Pares == 0)
+                    {
+                        lentillas.FechaFinal = DateTime.Now;
+                    }
                 }
                 else
                 {
-                    //Si no tiene lentillas habrá que darle la opción para que añada stock
-
+                    await Navigation.PushModalAsync(new StockPage());
                 }
             }
             catch (Exception ex)
