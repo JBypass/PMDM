@@ -9,8 +9,11 @@
     <ContentPage.Content>
         <local:GradientColorStack StartColor="#CBF4FF" EndColor="White">
             <StackLayout>
+                <Label Text="Marca:" />
                 <Entry Text="{Binding Marca}" />
+                <Label Text="Modelo:"/>
                 <Entry Text="{Binding Modelo}" />
+                <Label Text="Número de pares:"/>
                 <Entry Text="{Binding Num_Pares}" />
                 <Label Text="El número de pares es obligatorio" TextColor="Red" IsVisible="False">
                     <Label.Triggers>
@@ -20,6 +23,7 @@
                         </DataTrigger>
                     </Label.Triggers>
                 </Label>
+                <Label Text="Duración del par en días:"/>
                 <Entry Text="{Binding Duracion}" />
                 <Label Text="La duración de las lentillas es obligatoria" TextColor="Red" IsVisible="False">
                     <Label.Triggers>

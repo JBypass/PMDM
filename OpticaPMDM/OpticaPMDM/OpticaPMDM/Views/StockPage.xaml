@@ -12,7 +12,7 @@
     <ContentPage.Content>
         <local:GradientColorStack StartColor="#CBF4FF" EndColor="White">
             <ListView x:Name="lvDatos" ItemsSource="{Binding Elements}"
-                  SelectedItem="{Binding SelectedItem}">
+                  SelectedItem="{Binding SelectedItem}" RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <local:StockViewCell Marca="{Binding Marca}" 

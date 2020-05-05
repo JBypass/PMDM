@@ -10,10 +10,32 @@
     </ViewCell.ContextActions>
     <ViewCell.View>
         <StackLayout Orientation="Vertical">
-            <Label x:Name="MarcaLabel" />
-            <Label x:Name="ModeloLabel" />
-            <Label x:Name="DiasRestantesLabel" />
-            <Label x:Name="ParRestantesLabel" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            <StackLayout Grid.Column="0" Grid.Row="0">
+                <Label Text="Marca:"/>
+                <Label x:Name="MarcaLabel" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="0">
+                <Label Text="Dias restantes:"/>
+                <Label x:Name="DiasRestantesLabel" />
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="1">
+                <Label Text="Modelo:"/>
+                <Label x:Name="ModeloLabel" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="1">
+                <Label Text="Pares restantes:"/>
+                <Label x:Name="ParRestantesLabel" />
+            </StackLayout>
+            </Grid>
         </StackLayout>
     </ViewCell.View>
 </ViewCell>
