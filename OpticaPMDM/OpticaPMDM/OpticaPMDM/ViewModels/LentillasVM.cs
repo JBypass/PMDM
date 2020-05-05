@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace OpticaPMDM.ViewModels
 {
@@ -27,6 +28,8 @@ namespace OpticaPMDM.ViewModels
             Modelo = _model?.Modelo;
             //FechaRegistro = _model.FechaRegistro;
             //Duracion = _model.Duracion;
+            SaveCommand = new Command(Save);
+
         }
 
         string _marca;
