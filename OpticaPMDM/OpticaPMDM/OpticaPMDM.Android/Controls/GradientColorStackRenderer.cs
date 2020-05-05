@@ -5,6 +5,7 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
+[assembly: ExportRenderer(typeof(GradientColorStack), typeof(GradientColorStackRenderer))]
 namespace OpticaPMDM.Droid.Controls
 {
     class GradientColorStackRenderer : VisualElementRenderer<StackLayout>

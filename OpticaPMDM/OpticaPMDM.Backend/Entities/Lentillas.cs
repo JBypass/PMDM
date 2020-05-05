@@ -25,7 +25,5 @@ namespace OpticaPMDM.Backend.Entities
         public DateTime FechaRegistro { get; set; }
 
         public DateTime FechaFinal { get; set; }
-
-        public byte[] FotoCaja { get; set; }
     }
 }

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:OpticaPMDM.Controls"
+             mc:Ignorable="d"
+             x:Class="OpticaPMDM.Views.DetailsLentsPage">
+    <ContentPage.Content>
+        <local:GradientColorStack StartColor="#CBF4FF" EndColor="White">
+            <StackLayout>
+                <Entry Text="{Binding Marca}" />
+                <Entry Text="{Binding Modelo}" />
+                <Entry Text="{Binding Num_Pares}" />
+                <Label Text="El número de pares es obligatorio" TextColor="Red" IsVisible="False">
+                    <Label.Triggers>
+                        <DataTrigger Binding="{Binding IsNumParValid}"
+                                 Value="False" TargetType="Label">
+                            <Setter Property="IsVisible" Value="True" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+                <Entry Text="{Binding Duracion}" />
+                <Label Text="La duración de las lentillas es obligatoria" TextColor="Red" IsVisible="False">
+                    <Label.Triggers>
+                        <DataTrigger Binding="{Binding IsDuracionValid}"
+                                 Value="False" TargetType="Label">
+                            <Setter Property="IsVisible" Value="True" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+                <Button Text="Save" Command="{Binding SaveCommand}" 
+                    IsEnabled="False"  >
+                    <Button.Triggers>
+                        <MultiTrigger TargetType="Button">
+                            <MultiTrigger.Conditions>
+                                <BindingCondition Binding="{Binding IsNumParValid}" Value="True" />
+                                <BindingCondition Binding="{Binding IsDuracionValid}" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="IsEnabled" Value="True" />
+                        </MultiTrigger>
+                    </Button.Triggers>
+                </Button>
+            </StackLayout>
+        </local:GradientColorStack>
+    </ContentPage.Content>
+</ContentPage>

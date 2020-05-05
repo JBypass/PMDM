@@ -1,8 +1,8 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using OpticaPMDM.Services;
 using OpticaPMDM.Views;
+using System.IO;
 
 namespace OpticaPMDM
 {
@@ -13,8 +13,9 @@ namespace OpticaPMDM
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();
+
+            Backend.Context.Database.DBPATH = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "opticaPMDM.db3");
         }
 
         protected override void OnStart()

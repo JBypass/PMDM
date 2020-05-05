@@ -48,7 +48,8 @@ namespace OpticaPMDM.ViewModels
 
         public async Task Initialize()
         {
-            if (await _usadasService.GetLast(DateTime.Now) == null{
+            if (await _usadasService.GetLast(DateTime.Now) == null)
+            {
                 Estrenadas = false;
             }
             else
