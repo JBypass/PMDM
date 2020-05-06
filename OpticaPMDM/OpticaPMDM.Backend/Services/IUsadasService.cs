@@ -15,5 +15,7 @@ namespace OpticaPMDM.Backend.Services
         Task<Usadas> GetLast(DateTime date);
         Task Remove(Usadas usadas);
 
+        Task Update(Usadas usadas);
+
     }
 }

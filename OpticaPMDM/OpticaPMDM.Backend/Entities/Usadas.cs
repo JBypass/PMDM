@@ -7,7 +7,7 @@ namespace OpticaPMDM.Backend.Entities
 {
     public class Usadas
     {
-        [PrimaryKey]
+        [PrimaryKey, AutoIncrement]
         public long IdUsadas { get; set; }
 
         [NotNull]

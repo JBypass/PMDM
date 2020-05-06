@@ -7,6 +7,8 @@
             xmlns:views="clr-namespace:OpticaPMDM.Views"
             x:Class="OpticaPMDM.Views.MainPage"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-            android:TabbedPage.ToolbarPlacement="Bottom">
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="#afe6e4"
+            android:TabbedPage.BarSelectedItemColor="#01aca6">
 
 </TabbedPage>

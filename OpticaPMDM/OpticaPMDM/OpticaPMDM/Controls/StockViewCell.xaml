@@ -9,7 +9,7 @@
         <MenuItem x:Name="deletionMenu" Text="Eliminar" IsDestructive="True" />
     </ViewCell.ContextActions>
     <ViewCell.View>
-        <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Vertical" Padding="10, 0, 10, 0">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -20,20 +20,20 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
             <StackLayout Grid.Column="0" Grid.Row="0">
-                <Label Text="Marca:"/>
-                <Label x:Name="MarcaLabel" />
+                    <Label Text="Marca:" TextColor="Gray" FontAttributes="Bold"/>
+                    <Label x:Name="MarcaLabel" TextColor="Gray"/>
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="0">
-                <Label Text="Dias restantes:"/>
-                <Label x:Name="DiasRestantesLabel" />
+                    <Label Text="Dias restantes:" TextColor="Gray" FontAttributes="Bold"/>
+                    <Label x:Name="DiasRestantesLabel" TextColor="Gray"/>
             </StackLayout>
             <StackLayout Grid.Column="0" Grid.Row="1">
-                <Label Text="Modelo:"/>
-                <Label x:Name="ModeloLabel" />
+                    <Label Text="Modelo:" TextColor="Gray" FontAttributes="Bold"/>
+                    <Label x:Name="ModeloLabel" TextColor="Gray"/>
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="1">
-                <Label Text="Pares restantes:"/>
-                <Label x:Name="ParRestantesLabel" />
+                    <Label Text="Pares restantes:" TextColor="Gray" FontAttributes="Bold"/>
+                    <Label x:Name="ParRestantesLabel" TextColor="Gray"/>
             </StackLayout>
             </Grid>
         </StackLayout>

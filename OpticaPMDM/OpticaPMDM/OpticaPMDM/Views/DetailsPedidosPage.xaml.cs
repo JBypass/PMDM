@@ -13,26 +13,26 @@ using Xamarin.Forms.Xaml;
 namespace OpticaPMDM.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DetailsLentsPage : ContentPage
+    public partial class DetailsPedidosPage : ContentPage
     {
         bool Flag { get; set; }
-        public DetailsLentsPage(Lentillas lentillas)
+        public DetailsPedidosPage(Pedidos pedidos)
         {
             InitializeComponent();
-            BindingContext = new LentillasVM(lentillas, ItemSaved, LentillasService.Instance);
+            BindingContext = new PedidosVM(pedidos, ItemSaved, PedidosService.Instance);
             Flag = false;
         }
-        public DetailsLentsPage()
+        public DetailsPedidosPage()
         {
             InitializeComponent();
-            BindingContext = new LentillasVM(null, ItemSaved, LentillasService.Instance);
+            BindingContext = new PedidosVM(null, ItemSaved, PedidosService.Instance);
             Flag = false;
         }
 
-        public DetailsLentsPage(bool Flag)
+        public DetailsPedidosPage(bool Flag)
         {
             InitializeComponent();
-            BindingContext = new LentillasVM(null, ItemSaved, LentillasService.Instance);
+            BindingContext = new PedidosVM(null, ItemSaved, PedidosService.Instance);
             this.Flag = Flag;
         }
 

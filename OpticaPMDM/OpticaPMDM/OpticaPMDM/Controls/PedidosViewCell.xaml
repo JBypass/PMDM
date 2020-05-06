@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="OpticaPMDM.Controls.PedidosViewCell">
+    <ViewCell.ContextActions>
+        <MenuItem x:Name="deletionMenu" Text="Eliminar" IsDestructive="True" />
+    </ViewCell.ContextActions>
+    <ViewCell.View>
+        <StackLayout Orientation="Vertical" Padding="10, 0, 10, 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Column="0" Grid.Row="0">
+                    <Label Text="Fecha:" TextColor="Gray" FontAttributes="Bold" />
+                    <Label x:Name="FechaLabel" TextColor="Gray"/>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Grid.Row="0">
+                    <Label Text="Nombre:" TextColor="Gray" FontAttributes="Bold"/>
+                    <Label x:Name="NombreLabel" TextColor="Gray"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+                    <Label Text="Descripción:" TextColor="Gray" FontAttributes="Bold"/>
+                    <Label x:Name="DescripcionLabel" TextColor="Gray"/>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

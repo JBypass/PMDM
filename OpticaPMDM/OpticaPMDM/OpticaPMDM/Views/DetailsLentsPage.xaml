@@ -7,15 +7,32 @@
              mc:Ignorable="d"
              x:Class="OpticaPMDM.Views.DetailsLentsPage">
     <ContentPage.Content>
-        <local:GradientColorStack StartColor="#CBF4FF" EndColor="White">
-            <StackLayout>
-                <Label Text="Marca:" />
-                <Entry Text="{Binding Marca}" />
-                <Label Text="Modelo:"/>
-                <Entry Text="{Binding Modelo}" />
-                <Label Text="Número de pares:"/>
-                <Entry Text="{Binding Num_Pares}" />
-                <Label Text="El número de pares es obligatorio" TextColor="Red" IsVisible="False">
+        <ScrollView>
+            <local:GradientColorStack StartColor="#ffffff" EndColor="#c6eceb">
+                <StackLayout>
+                    <Label Text="Añadir stock" TextColor="#ffffff" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#01aca6" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout Padding="15, 0, 15, 0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Label Text="Marca:" TextColor="#01aca6" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+                        <Entry Text="{Binding Marca}" TextColor="Gray" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+                        <Label Text="Modelo:" TextColor="#01aca6" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"/>
+                        <Entry Text="{Binding Modelo}" TextColor="Gray" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"/>
+                        <Label Text="Número de pares:" TextColor="#01aca6" Grid.Column="0" Grid.Row="2"/>
+                        <Entry Text="{Binding Num_Pares}" TextColor="Gray" Grid.Column="0" Grid.Row="2"/>
+                        <Label Text="El número de pares es obligatorio" TextColor="Red" IsVisible="False" Grid.Column="0" Grid.Row="3">
                     <Label.Triggers>
                         <DataTrigger Binding="{Binding IsNumParValid}"
                                  Value="False" TargetType="Label">
@@ -23,9 +40,9 @@
                         </DataTrigger>
                     </Label.Triggers>
                 </Label>
-                <Label Text="Duración del par en días:"/>
-                <Entry Text="{Binding Duracion}" />
-                <Label Text="La duración de las lentillas es obligatoria" TextColor="Red" IsVisible="False">
+                        <Label Text="Duración del par en días:" TextColor="#01aca6" Grid.Column="1" Grid.Row="2"/>
+                        <Entry Text="{Binding Duracion}" TextColor="Gray" Grid.Column="1" Grid.Row="2"/>
+                        <Label Text="La duración de las lentillas es obligatoria" TextColor="Red" IsVisible="False" Grid.Column="1" Grid.Row="3">
                     <Label.Triggers>
                         <DataTrigger Binding="{Binding IsDuracionValid}"
                                  Value="False" TargetType="Label">
@@ -33,8 +50,12 @@
                         </DataTrigger>
                     </Label.Triggers>
                 </Label>
-                <Button Text="Save" Command="{Binding SaveCommand}" 
-                    IsEnabled="False"  >
+                    <Button Text="Guardar" Command="{Binding SaveCommand}" FontSize="Medium" FontAttributes="Bold"
+                            CornerRadius="50" BackgroundColor="#01aca6"
+                        TextColor="#ffffff"
+                                MinimumHeightRequest="100"
+                            Margin="10, 10, 10, 10"
+                    IsEnabled="False"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2">
                     <Button.Triggers>
                         <MultiTrigger TargetType="Button">
                             <MultiTrigger.Conditions>
@@ -45,7 +66,9 @@
                         </MultiTrigger>
                     </Button.Triggers>
                 </Button>
-            </StackLayout>
+                    </Grid>
+                </StackLayout>
         </local:GradientColorStack>
+    </ScrollView>
     </ContentPage.Content>
 </ContentPage>

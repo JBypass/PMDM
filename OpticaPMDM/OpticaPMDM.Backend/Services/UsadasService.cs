@@ -49,5 +49,11 @@ namespace OpticaPMDM.Backend.Services
         {
             await Database.INSTANCE.Delete(usadas);
         }
+
+        public async Task Update(Usadas usadas)
+        {
+            await Database.INSTANCE.Update(usadas);
+            MessagingCenter.Send<UsadasService, Usadas>(this, "Update", usadas);
+        }
     }
 }

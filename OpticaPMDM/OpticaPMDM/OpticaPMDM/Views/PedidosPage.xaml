@@ -3,13 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:OpticaPMDM.Controls"
              mc:Ignorable="d"
              x:Class="OpticaPMDM.Views.PedidosPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Nuevo Pedido" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <local:GradientColorStack StartColor="#ffffff" EndColor="#c6eceb">
+            <StackLayout Padding="15, 0, 15, 0" BackgroundColor="#afe6e4">
+            <SearchBar 
+                        x:Name="SrchPedido" Placeholder="Buscar por descripcion" BackgroundColor="#afe6e4"
+                        Text="{Binding SearchedText, Mode=TwoWay}">
+            </SearchBar>
+            
+                <Label Text="Filtrar por fecha desde: " TextColor="#01aca6"/>
+                <DatePicker Date="{Binding FechaDesdeBuscar, Mode=TwoWay}" TextColor="Gray"/>
+                <Label Text="hasta: " TextColor="#01aca6"/>
+                <DatePicker Date="{Binding FechaHastaBuscar, Mode=TwoWay}" TextColor="Gray"/>
+            </StackLayout>
+            <ListView x:Name="lvDatos" ItemsSource="{Binding Elements}"
+                  SelectedItem="{Binding SelectedItem}" RowHeight="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <local:PedidosViewCell Nombre="{Binding NombreCliente}" 
+                                           Descripcion="{Binding Descripcion}"
+                                           Fecha="{Binding FechaPedido}"
+                                           DeleteCommand="{Binding RemovePedidoCommand}"
+                                           DeleteCommandParameter="{Binding .}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </local:GradientColorStack>
     </ContentPage.Content>
 </ContentPage>

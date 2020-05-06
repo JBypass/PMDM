@@ -49,18 +49,6 @@ namespace OpticaPMDM.Views
             }
         }
 
-        private ContentPage ConfiguracionPage
-        {
-            get
-            {
-                if(_configuracionPage == null)
-                {
-                    _configuracionPage = new ConfiguracionPage();
-                }
-                return _configuracionPage;
-            }
-        }
-
         public MainPage()
         {
             InitializeComponent();
@@ -74,8 +62,6 @@ namespace OpticaPMDM.Views
             PedidosPage.IconImageSource = ImageSource.FromFile("cart");
             Children.Add(PedidosPage);
 
-            ConfiguracionPage.IconImageSource = ImageSource.FromFile("cog_outline");
-            Children.Add(ConfiguracionPage);
         }
     }
 }

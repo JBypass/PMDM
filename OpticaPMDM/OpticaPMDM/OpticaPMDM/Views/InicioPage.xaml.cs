@@ -18,8 +18,7 @@ namespace OpticaPMDM.Views
         public InicioPage()
         {
             InitializeComponent();
-
-            _viewmodel = new InicioVM(UsadasService.Instance, LentillasService.Instance);
+            _viewmodel = new InicioVM(UsadasService.Instance, LentillasService.Instance) { Navegacion = Navigation }; ;
             BindingContext = _viewmodel;
             Appearing += InicioPage_Appearing;
         }

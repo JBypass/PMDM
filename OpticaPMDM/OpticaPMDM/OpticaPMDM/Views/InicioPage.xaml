@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              x:Class="OpticaPMDM.Views.InicioPage">
     <ContentPage.Content>
-        <local:GradientColorStack StartColor="#CBF4FF" EndColor="White">
+        <local:GradientColorStack StartColor="#ffffff" EndColor="#c6eceb">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*" />
@@ -16,37 +16,36 @@
                     <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
 
-                <Label Text="Optica PMDM" TextColor="LightSkyBlue" FontSize="Large" FontAttributes="Bold" 
-                       VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Image Source="logooptica.png" WidthRequest="40" HeightRequest="20" Margin="0, 30, 0, 20"/>
 
                 <Frame Grid.Row="1" CornerRadius="200" HeightRequest="200"
-                    BorderColor="Transparent" BackgroundColor="Gray"
+                    BorderColor="Transparent" BackgroundColor="{Binding ActivoColorRein}"
                        Padding="0" WidthRequest="200" VerticalOptions="Center"
                        HorizontalOptions="Center">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding EstrenarCommand}"/>
                     </Frame.GestureRecognizers>
-                    <Frame BorderColor="Transparent" BackgroundColor="LightSkyBlue"
+                    <Frame BorderColor="Transparent" BackgroundColor="{Binding ActivoColorEst}"
                            Padding="0" CornerRadius="200" WidthRequest="185" HeightRequest="185"
                            VerticalOptions="Center" HorizontalOptions="Center">
-                        <Label Text="Estrenar" TextColor="Gray" VerticalOptions="Center" HorizontalOptions="Center"
-                               FontSize="Medium" FontAttributes="Bold"/>
+                        <Label Text="{Binding TextoBoton}" TextColor="#ffffff" VerticalOptions="Center" HorizontalOptions="Center"
+                               FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
                     </Frame>
                 </Frame>
 
                 <Button Text="Cargar stock" Command="{Binding CargarStockCommand}" 
                                 Grid.Row="2" 
                                 FontSize="Medium" FontAttributes="Bold"
-                            CornerRadius="50" BackgroundColor="LightSkyBlue"
-                        TextColor="Gray"
+                            CornerRadius="50" BackgroundColor="#01aca6"
+                        TextColor="#ffffff"
                                 MinimumHeightRequest="100"
                             Margin="10, 10, 10, 10"/>
 
                 <Button Text="Reiniciar" Command="{Binding FinalizarParCommand}" 
                                 Grid.Row="3" 
                                 FontSize="Medium" FontAttributes="Bold"
-                            CornerRadius="50" BackgroundColor="LightSkyBlue"
-                        TextColor="Gray"
+                            CornerRadius="50" BackgroundColor="{Binding ActivoColorRein}"
+                        TextColor="#ffffff"
                                 MinimumHeightRequest="100"
                             Margin="10, 10, 10, 10"/>
 

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
-namespace OpticaPMDM.ViewModels
+namespace OpticaPMDM.Controls
 {
-    class PedidiosVM
+    public class TextArea : Editor
     {
     }
 }

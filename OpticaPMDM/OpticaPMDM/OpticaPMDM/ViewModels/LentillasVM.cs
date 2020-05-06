@@ -22,12 +22,15 @@ namespace OpticaPMDM.ViewModels
             _service = service;
             _model = model;
             _itemSaved = itemSaved;
-            //Num_Pares = _model.Num_Pares;
-            //Dias_Restantes = _model.Dias_Restantes;
+            if(_model != null)
+            {
+                Num_Pares = _model.Num_Pares.ToString();
+                Duracion = _model.Duracion.ToString();
+                Dias_Restantes = _model.Dias_Restantes;
+                FechaRegistro = _model.FechaRegistro;
+            }
             Marca = _model?.Marca;
             Modelo = _model?.Modelo;
-            //FechaRegistro = _model.FechaRegistro;
-            //Duracion = _model.Duracion;
             SaveCommand = new Command(Save);
 
         }

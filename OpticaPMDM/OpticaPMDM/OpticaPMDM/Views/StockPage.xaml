@@ -7,10 +7,10 @@
              mc:Ignorable="d"
              x:Class="OpticaPMDM.Views.StockPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Nuevo" Clicked="ToolbarItem_Clicked" />
+        <ToolbarItem Text="Añadir" Clicked="ToolbarItem_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <local:GradientColorStack StartColor="#CBF4FF" EndColor="White">
+        <local:GradientColorStack StartColor="#ffffff" EndColor="#c6eceb">
             <ListView x:Name="lvDatos" ItemsSource="{Binding Elements}"
                   SelectedItem="{Binding SelectedItem}" RowHeight="100">
                 <ListView.ItemTemplate>

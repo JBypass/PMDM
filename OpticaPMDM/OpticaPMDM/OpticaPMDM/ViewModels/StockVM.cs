@@ -25,8 +25,8 @@ namespace OpticaPMDM.ViewModels
         private ObservableCollection<LentillasStock> _elements = new ObservableCollection<LentillasStock>();
         public ObservableCollection<LentillasStock> Elements { get => _elements; }
 
-        Lentillas _selectedItem;
-        public Lentillas SelectedItem
+        LentillasStock _selectedItem;
+        public LentillasStock SelectedItem
         {
             get => _selectedItem;
             set
@@ -35,7 +35,7 @@ namespace OpticaPMDM.ViewModels
                 {
                     var task = Task.Run(async () =>
                     {
-                        return await LentillasService.Instance.GetByID(value.IdLentillas);
+                        return await LentillasService.Instance.GetByID(value.ID);
                     });
                     task.Wait();
                     _goToDetails?.Invoke(task.Result);
@@ -64,10 +64,6 @@ namespace OpticaPMDM.ViewModels
                 element.Modelo = item.Modelo;
                 element.ParRestantes = item.Num_Pares;
                 element.DiasRestantes = item.Dias_Restantes;
-                //element.Duracion = item.Duracion;
-                //element.FechaFinal = item.FechaFinal;
-                //element.FechaRegistro = item.FechaRegistro;
-                //element.FotoCaja = item.FotoCaja;
             }
         }
 

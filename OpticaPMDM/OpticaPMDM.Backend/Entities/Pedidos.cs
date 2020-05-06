@@ -13,8 +13,11 @@ namespace OpticaPMDM.Backend.Entities
         [NotNull]
         public string Descripcion { get; set; }
 
+        [NotNull]
         public string Nombre_Cliente { get; set; }
 
         public DateTime FechaPedido { get; set; }
+
+        public DateTime FechaEnviado { get; set; }
     }
 }
